@@ -84,6 +84,9 @@
 	<string name="force_relaunch">Do not reuse home screen</string>
 	<string name="force_relaunch_yes">Yes</string>
 	<string name="force_relaunch_no">No (Default)</string>
+	<string name="home_button_toggle" translatable="false">Toggle Home Button Opening Search Menu</string>
+	<string name="home_button_toggle_yes" translatable="false">Yes</string>
+	<string name="home_button_toggle_no" translatable="false">No (Default)</string>
 	<string name="skip">Skip</string>
 	<string name="reset">Reset</string>
 	<string name="edit_app">Edit app</string>

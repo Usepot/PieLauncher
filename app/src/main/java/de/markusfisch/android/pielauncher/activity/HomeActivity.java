@@ -168,8 +168,9 @@ public class HomeActivity extends Activity {
 		super.onResume();
 		updatePrefsButton();
 		updateSystemBars();
-		if (showAllAppsOnResume) {
+		if (showAllAppsOnResume && !PieLauncherApp.getPrefs(this).homeButtonOpensMenu()) {
 			showAllApps();
+			//AMB
 			showAllAppsOnResume = false;
 		} else {
 			hideAllApps();
@@ -347,6 +348,7 @@ public class HomeActivity extends Activity {
 			return;
 		}
 
+
 		searchInput.setVisibility(View.VISIBLE);
 		prefsButton.setVisibility(View.VISIBLE);
 		setAlpha(searchInput, 1f);
@@ -380,6 +382,7 @@ public class HomeActivity extends Activity {
 			searchInput.setVisibility(View.GONE);
 			hideKeyboadAndPrefsButton();
 		}
+
 		// Ensure the pie menu is initially hidden because on some devices
 		// there's not always a matching ACTION_UP/_CANCEL event for every
 		// ACTION_DOWN event.

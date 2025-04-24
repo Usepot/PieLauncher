@@ -82,6 +82,8 @@ public class Preferences {
 	private int searchParameter = SEARCH_PARAMETER_APP_LABEL;
 	private int showAppNames = SHOW_APP_NAMES_SEARCH;
 	private boolean excludePie = false;
+
+	private boolean homeButtonOpensMenu = true;
 	private int iconPress = ICON_PRESS_DEFAULT;
 	private String iconPack;
 	private boolean useLightDialogs = false;
@@ -325,6 +327,14 @@ public class Preferences {
 	public void setUseLightDialogs(boolean useLightDialogs) {
 		this.useLightDialogs = useLightDialogs;
 		put(USE_LIGHT_DIALOGS, useLightDialogs).apply();
+	}
+
+	public boolean homeButtonOpensMenu() {
+		return homeButtonOpensMenu;
+	}
+
+	public void setHomeButtonOpensMenu(boolean homeButtonOpensMenu) {
+		this.homeButtonOpensMenu = homeButtonOpensMenu;
 	}
 
 	public boolean forceRelaunch() {

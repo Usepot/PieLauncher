@@ -125,6 +125,10 @@
 					style="@style/Preference"
 					android:id="@+id/force_relaunch"
 					android:text="@string/force_relaunch_no" />
+				<de.markusfisch.android.pielauncher.widget.PreferenceView
+					style="@style/Preference"
+					android:id="@+id/home_button_toggle"
+					android:text="No (Default)" />
 			</LinearLayout>
 			<Button
 				style="@style/Button"

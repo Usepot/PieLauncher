@@ -253,6 +253,11 @@ public class PreferencesActivity extends Activity {
 				PreferencesActivity::getForceRelaunchOptions,
 				() -> prefs.forceRelaunch(),
 				(value) -> prefs.setForceRelaunch(value));
+		initPreference(R.id.home_button_toggle,
+				R.string.home_button_toggle,
+				PreferencesActivity::getHomeButtonToggleOptions,
+				() -> prefs.homeButtonOpensMenu(),
+				(value) -> prefs.setHomeButtonOpensMenu(value));
 	}
 
 	private <T, G> void initPreference(
@@ -559,6 +564,14 @@ public class PreferencesActivity extends Activity {
 		map.put(Boolean.FALSE, R.string.force_relaunch_no);
 		return map;
 	}
+
+	private static Map<Boolean, Integer> getHomeButtonToggleOptions() {
+		Map<Boolean, Integer> map = new LinkedHashMap<>();
+		map.put(Boolean.TRUE, R.string.force_relaunch_yes);
+		map.put(Boolean.FALSE, R.string.force_relaunch_no);
+		return map;
+	}
+
 
 	private interface GetOptionsListener<T, G> {
 		Map<T, G> onGetOptions();
