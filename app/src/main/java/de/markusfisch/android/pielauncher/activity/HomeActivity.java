@@ -168,9 +168,8 @@ public class HomeActivity extends Activity {
 		super.onResume();
 		updatePrefsButton();
 		updateSystemBars();
-		if (showAllAppsOnResume && !PieLauncherApp.getPrefs(this).homeButtonOpensMenu()) {
+		if (showAllAppsOnResume && PieLauncherApp.getPrefs(this).homeButtonOpensMenu()) {
 			showAllApps();
-			//AMB
 			showAllAppsOnResume = false;
 		} else {
 			hideAllApps();

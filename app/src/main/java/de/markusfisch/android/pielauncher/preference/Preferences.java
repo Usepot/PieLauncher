@@ -84,6 +84,8 @@ public class Preferences {
 	private boolean excludePie = false;
 
 	private boolean homeButtonOpensMenu = true;
+
+	private boolean swipeAccuracy = false;
 	private int iconPress = ICON_PRESS_DEFAULT;
 	private String iconPack;
 	private boolean useLightDialogs = false;
@@ -331,6 +333,13 @@ public class Preferences {
 
 	public boolean homeButtonOpensMenu() {
 		return homeButtonOpensMenu;
+	}
+	public boolean swipeAccuracy() {
+		return swipeAccuracy;
+	}
+
+	public void setSwipeAccuracy(boolean swipeAccuracy) {
+		this.swipeAccuracy = swipeAccuracy;
 	}
 
 	public void setHomeButtonOpensMenu(boolean homeButtonOpensMenu) {

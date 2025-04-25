@@ -87,6 +87,9 @@
 	<string name="home_button_toggle" translatable="false">Toggle Home Button Opening Search Menu</string>
 	<string name="home_button_toggle_yes" translatable="false">Yes</string>
 	<string name="home_button_toggle_no" translatable="false">No (Default)</string>
+	<string name="swipe_accuracy" translatable="false">Accurate Swipes</string>
+	<string name="swipe_accuracy_yes" translatable="false">Yes</string>
+	<string name="swipe_accuracy_no" translatable="false">No (Default)</string>
 	<string name="skip">Skip</string>
 	<string name="reset">Reset</string>
 	<string name="edit_app">Edit app</string>

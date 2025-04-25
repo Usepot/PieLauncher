@@ -1112,6 +1112,9 @@ public class AppPieView extends View {
 				return appIcon;
 			}
 		}
+
+
+
 		return null;
 	}
 
@@ -1570,10 +1573,11 @@ public class AppPieView extends View {
 		if (f <= 0) {
 			return false;
 		}
-
 		CanvasPieMenu.paint.setAlpha(Math.round(f * 255f));
+
 		PieLauncherApp.appMenu.calculate(touch.x, touch.y,
-				prefs.animateInOut() ? easeSlowerOut(f) : 1f);
+				prefs.animateInOut() ? easeSlowerOut(f) : 1f, prefs.swipeAccuracy());
+
 		PieLauncherApp.appMenu.draw(canvas);
 
 		int selectedIcon = PieLauncherApp.appMenu.getSelectedIcon();

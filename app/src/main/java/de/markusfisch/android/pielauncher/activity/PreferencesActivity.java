@@ -258,6 +258,11 @@ public class PreferencesActivity extends Activity {
 				PreferencesActivity::getHomeButtonToggleOptions,
 				() -> prefs.homeButtonOpensMenu(),
 				(value) -> prefs.setHomeButtonOpensMenu(value));
+		initPreference(R.id.swipe_accuracy,
+				R.string.swipe_accuracy,
+				PreferencesActivity::getSwipeAccuracyToggleButtons,
+				() -> prefs.swipeAccuracy(),
+				(value) -> prefs.setSwipeAccuracy(value));
 	}
 
 	private <T, G> void initPreference(
@@ -566,6 +571,13 @@ public class PreferencesActivity extends Activity {
 	}
 
 	private static Map<Boolean, Integer> getHomeButtonToggleOptions() {
+		Map<Boolean, Integer> map = new LinkedHashMap<>();
+		map.put(Boolean.TRUE, R.string.force_relaunch_yes);
+		map.put(Boolean.FALSE, R.string.force_relaunch_no);
+		return map;
+	}
+
+	private static Map<Boolean, Integer> getSwipeAccuracyToggleButtons() {
 		Map<Boolean, Integer> map = new LinkedHashMap<>();
 		map.put(Boolean.TRUE, R.string.force_relaunch_yes);
 		map.put(Boolean.FALSE, R.string.force_relaunch_no);

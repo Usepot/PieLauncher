@@ -2,6 +2,8 @@ package de.markusfisch.android.pielauncher.graphics;
 
 import java.util.ArrayList;
 
+import de.markusfisch.android.pielauncher.app.PieLauncherApp;
+
 public class PieMenu {
 	public static final double TAU = Math.PI + Math.PI;
 	public static final double HALF_PI = Math.PI * .5f;
@@ -69,11 +71,10 @@ public class PieMenu {
 	}
 
 	public void calculate(float x, float y) {
-		calculate(x, y, 1f);
+		calculate(x, y, 1f, false);
 	}
 
-	public void calculate(float x, float y, float t) {
-		selectedIcon = -1;
+	public void calculate(float x, float y, float t, boolean swipeAccuracy) {
 
 		int numberOfIcons = icons.size();
 		if (numberOfIcons < 1) {
@@ -108,7 +109,12 @@ public class PieMenu {
 					maxIconSize = b + (maxIconSize - b) * factor;
 				}
 				cursorNearCenter = true;
+				selectedIcon = -1;
 			}
+
+
+
+
 
 			// Determine how close every icon is to the cursor.
 			{
@@ -140,7 +146,9 @@ public class PieMenu {
 				}
 
 				if (!cursorNearCenter) {
-					selectedIcon = closestIcon;
+					if (cursorRadius < infieldRadius + rad || !swipeAccuracy) {
+						selectedIcon = closestIcon;
+					}
 				}
 			}
 		}

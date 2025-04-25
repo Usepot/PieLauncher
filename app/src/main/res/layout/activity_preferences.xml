@@ -128,7 +128,11 @@
 				<de.markusfisch.android.pielauncher.widget.PreferenceView
 					style="@style/Preference"
 					android:id="@+id/home_button_toggle"
-					android:text="No (Default)" />
+					android:text="@string/home_button_toggle_no" />
+				<de.markusfisch.android.pielauncher.widget.PreferenceView
+					style="@style/Preference"
+					android:id="@+id/swipe_accuracy"
+					android:text="@string/swipe_accuracy_no"/>
 			</LinearLayout>
 			<Button
 				style="@style/Button"
