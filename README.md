@@ -1,3 +1,8 @@
+# Note From Ambassator:
+This is a fork of PieLauncher that adds a few settings that to me make the app genuinely unusable without
+likely going to add folders + widgets in the future it will just take a bit and I don't have time rn
+Anything under this is from the original PieLauncher Readme
+
 # Pie Launcher
 
 Android home screen launcher that uses a dynamic
